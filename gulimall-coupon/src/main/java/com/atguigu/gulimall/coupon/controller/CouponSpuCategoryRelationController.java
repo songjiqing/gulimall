@@ -3,7 +3,6 @@ package com.atguigu.gulimall.coupon.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,7 +22,7 @@ import com.atguigu.common.utils.R;
  *
  * @author songjiqing
  * @email 1256478037@qq.com
- * @date 2021-01-22 14:19:38
+ * @date 2021-01-24 10:55:26
  */
 @RestController
 @RequestMapping("coupon/couponspucategoryrelation")
@@ -35,7 +34,6 @@ public class CouponSpuCategoryRelationController {
      * 列表
      */
     @RequestMapping("/list")
-//    @RequiresPermissions("coupon:couponspucategoryrelation:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = couponSpuCategoryRelationService.queryPage(params);
 
@@ -47,7 +45,6 @@ public class CouponSpuCategoryRelationController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-//    @RequiresPermissions("coupon:couponspucategoryrelation:info")
     public R info(@PathVariable("id") Long id){
 		CouponSpuCategoryRelationEntity couponSpuCategoryRelation = couponSpuCategoryRelationService.getById(id);
 
@@ -58,7 +55,6 @@ public class CouponSpuCategoryRelationController {
      * 保存
      */
     @RequestMapping("/save")
-//    @RequiresPermissions("coupon:couponspucategoryrelation:save")
     public R save(@RequestBody CouponSpuCategoryRelationEntity couponSpuCategoryRelation){
 		couponSpuCategoryRelationService.save(couponSpuCategoryRelation);
 
@@ -69,7 +65,6 @@ public class CouponSpuCategoryRelationController {
      * 修改
      */
     @RequestMapping("/update")
-//    @RequiresPermissions("coupon:couponspucategoryrelation:update")
     public R update(@RequestBody CouponSpuCategoryRelationEntity couponSpuCategoryRelation){
 		couponSpuCategoryRelationService.updateById(couponSpuCategoryRelation);
 
@@ -80,7 +75,6 @@ public class CouponSpuCategoryRelationController {
      * 删除
      */
     @RequestMapping("/delete")
-//    @RequiresPermissions("coupon:couponspucategoryrelation:delete")
     public R delete(@RequestBody Long[] ids){
 		couponSpuCategoryRelationService.removeByIds(Arrays.asList(ids));
 

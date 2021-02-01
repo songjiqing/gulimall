@@ -10,6 +10,10 @@
     <name>谷粒商城父工程</name>
     <packaging>pom</packaging>
 
+    <properties>
+        <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+    </properties>
+
     <modules>
         <module>gulimall-product</module>
         <module>gulimall-order</module>
@@ -19,12 +23,13 @@
 <!--        <module>renren-fast</module>-->
 <!--        <module>renren-generator</module>-->
         <module>gulimall-common</module>
+        <module>gulimall-gateway</module>
     </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.4.RELEASE</version>
+        <version>2.3.2.RELEASE</version>
     </parent>
 
     <build>

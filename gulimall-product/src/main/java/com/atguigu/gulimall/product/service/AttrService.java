@@ -11,7 +11,7 @@ import java.util.Map;
  *
  * @author songjiqing
  * @email 1256478037@qq.com
- * @date 2021-01-22 14:08:01
+ * @date 2021-01-24 10:48:53
  */
 public interface AttrService extends IService<AttrEntity> {
 

@@ -13,6 +13,10 @@
     <description>谷粒商城公共代码</description>
     <name>谷粒商城公共代码</name>
 
+    <properties>
+        <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
+    </properties>
+
     <dependencies>
         <!--        mybatis-plus-->
         <dependency>
@@ -63,7 +67,7 @@
         </dependency>
 
         <!--        配置中心来做配置管理-->
-        <dependency>
+        <dependency> 
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
@@ -72,6 +76,27 @@
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
             <version>2.0.1.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-test</artifactId>
+            <scope>test</scope>
         </dependency>
 
 

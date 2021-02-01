@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
-import java.util.Date;
+
 import lombok.Data;
 
 /**
@@ -12,7 +12,7 @@ import lombok.Data;
  * 
  * @author songjiqing
  * @email 1256478037@qq.com
- * @date 2021-01-22 14:08:01
+ * @date 2021-01-24 10:48:53
  */
 @Data
 @TableName("pms_sku_images")

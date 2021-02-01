@@ -12,7 +12,7 @@ import lombok.Data;
  * 
  * @author songjiqing
  * @email 1256478037@qq.com
- * @date 2021-01-22 14:19:38
+ * @date 2021-01-24 10:55:26
  */
 @Data
 @TableName("sms_coupon_spu_category_relation")

@@ -3,7 +3,6 @@ package com.atguigu.gulimall.coupon.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,7 +22,7 @@ import com.atguigu.common.utils.R;
  *
  * @author songjiqing
  * @email 1256478037@qq.com
- * @date 2021-01-22 14:19:38
+ * @date 2021-01-24 10:55:26
  */
 @RestController
 @RequestMapping("coupon/couponspurelation")
@@ -35,7 +34,6 @@ public class CouponSpuRelationController {
      * 列表
      */
     @RequestMapping("/list")
-    @RequiresPermissions("coupon:couponspurelation:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = couponSpuRelationService.queryPage(params);
 
@@ -47,7 +45,6 @@ public class CouponSpuRelationController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    @RequiresPermissions("coupon:couponspurelation:info")
     public R info(@PathVariable("id") Long id){
 		CouponSpuRelationEntity couponSpuRelation = couponSpuRelationService.getById(id);
 
@@ -58,7 +55,6 @@ public class CouponSpuRelationController {
      * 保存
      */
     @RequestMapping("/save")
-    @RequiresPermissions("coupon:couponspurelation:save")
     public R save(@RequestBody CouponSpuRelationEntity couponSpuRelation){
 		couponSpuRelationService.save(couponSpuRelation);
 
@@ -69,7 +65,6 @@ public class CouponSpuRelationController {
      * 修改
      */
     @RequestMapping("/update")
-    @RequiresPermissions("coupon:couponspurelation:update")
     public R update(@RequestBody CouponSpuRelationEntity couponSpuRelation){
 		couponSpuRelationService.updateById(couponSpuRelation);
 
@@ -80,7 +75,6 @@ public class CouponSpuRelationController {
      * 删除
      */
     @RequestMapping("/delete")
-    @RequiresPermissions("coupon:couponspurelation:delete")
     public R delete(@RequestBody Long[] ids){
 		couponSpuRelationService.removeByIds(Arrays.asList(ids));
 

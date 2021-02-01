@@ -3,7 +3,6 @@ package com.atguigu.gulimall.coupon.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,7 +22,7 @@ import com.atguigu.common.utils.R;
  *
  * @author songjiqing
  * @email 1256478037@qq.com
- * @date 2021-01-22 14:19:38
+ * @date 2021-01-24 10:55:26
  */
 @RestController
 @RequestMapping("coupon/homesubject")
@@ -35,7 +34,6 @@ public class HomeSubjectController {
      * 列表
      */
     @RequestMapping("/list")
-    @RequiresPermissions("coupon:homesubject:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = homeSubjectService.queryPage(params);
 
@@ -47,7 +45,6 @@ public class HomeSubjectController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    @RequiresPermissions("coupon:homesubject:info")
     public R info(@PathVariable("id") Long id){
 		HomeSubjectEntity homeSubject = homeSubjectService.getById(id);
 
@@ -58,7 +55,6 @@ public class HomeSubjectController {
      * 保存
      */
     @RequestMapping("/save")
-    @RequiresPermissions("coupon:homesubject:save")
     public R save(@RequestBody HomeSubjectEntity homeSubject){
 		homeSubjectService.save(homeSubject);
 
@@ -69,7 +65,6 @@ public class HomeSubjectController {
      * 修改
      */
     @RequestMapping("/update")
-    @RequiresPermissions("coupon:homesubject:update")
     public R update(@RequestBody HomeSubjectEntity homeSubject){
 		homeSubjectService.updateById(homeSubject);
 
@@ -80,7 +75,6 @@ public class HomeSubjectController {
      * 删除
      */
     @RequestMapping("/delete")
-    @RequiresPermissions("coupon:homesubject:delete")
     public R delete(@RequestBody Long[] ids){
 		homeSubjectService.removeByIds(Arrays.asList(ids));
 
