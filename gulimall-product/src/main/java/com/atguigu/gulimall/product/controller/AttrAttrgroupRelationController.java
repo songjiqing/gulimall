@@ -25,7 +25,7 @@ import com.atguigu.common.utils.R;
  * @date 2021-01-24 10:48:53
  */
 @RestController
-@RequestMapping("project/attrattrgrouprelation")
+@RequestMapping("product/attrattrgrouprelation")
 public class AttrAttrgroupRelationController {
     @Autowired
     private AttrAttrgroupRelationService attrAttrgroupRelationService;

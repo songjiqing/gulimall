@@ -25,7 +25,7 @@ import com.atguigu.common.utils.R;
  * @date 2021-01-24 10:48:04
  */
 @RestController
-@RequestMapping("project/spucomment")
+@RequestMapping("product/spucomment")
 public class SpuCommentController {
     @Autowired
     private SpuCommentService spuCommentService;

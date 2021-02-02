@@ -25,7 +25,7 @@ import com.atguigu.common.utils.R;
  * @date 2021-01-24 10:48:05
  */
 @RestController
-@RequestMapping("project/spuinfodesc")
+@RequestMapping("product/spuinfodesc")
 public class SpuInfoDescController {
     @Autowired
     private SpuInfoDescService spuInfoDescService;

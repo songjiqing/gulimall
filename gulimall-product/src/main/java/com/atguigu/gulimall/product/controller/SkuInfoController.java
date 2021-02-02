@@ -25,7 +25,7 @@ import com.atguigu.common.utils.R;
  * @date 2021-01-24 10:48:53
  */
 @RestController
-@RequestMapping("project/skuinfo")
+@RequestMapping("product/skuinfo")
 public class SkuInfoController {
     @Autowired
     private SkuInfoService skuInfoService;

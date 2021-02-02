@@ -3,6 +3,5 @@ spring:
     nacos:
       config:
         server-addr: 127.0.0.1:8848
-        namespace: d61b4b97-bac6-4813-9176-92607181bbc0
   application:
-    name: gulimall-product
+    name: gulimall-gateway
